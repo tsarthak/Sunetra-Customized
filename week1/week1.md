@@ -1,3 +1,6 @@
+---
+colorlinks: true
+---
 # Week 1 - Number systems
 
 ## The idea of numbers as "symbols"
@@ -14,6 +17,10 @@ We represent ideas or ideas of items in one of 2 ways
 If we combine both of them in a uniform way, we come up with a powerful way of communicating ideas with other people.
 
 Numbers like $1,2,3,\ldots$ are no different. They are called arabic numbers because of the place of their origin and popular due to colonization of half of the world. But, the idea of quantities predates them. We just chose to draw some symbols and chose how to pronounce them, but the underlying idea is the same - to denote a magnitude.
+
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
 
 ## Place values
 
@@ -33,8 +40,10 @@ Which essentially means
 
 The same can be extended for any quantity. E.g. $5,467,234$.
 $$
+\begin{aligned}
 5,467,234 \\ = 5000000 + 400000 + 60000 + 7000 + 200 + 30 + 4 \\
 = 5 \times 1000000 + 4 \times 100000 + 6 \times 10000 + 7 \times 1000 + 2 \times 100 + 3 \times 10 + 4
+\end{aligned}
 $$
 
 Which can be read as
@@ -50,8 +59,10 @@ Which can be read as
 This way of grouping quantities together is what is called the ***place value system***. The number of groups that we have in decimal number system are essentially powers of 10. Reading the number from right to left, we see that each number is counted in some groups of 10. If we consider the right-most position to be 0, then the place value system can be generally written as
 
 $$
+\begin{aligned}
 \sum_{i=0}^{k}(n_i \times 10^i) = \\
 n_0 \times 10^0 + n_1 \times 10^1 + n_2 \times 10^2 + \ldots + n_k \times 10^k
+\end{aligned}
 $$
 
 Where $i$ is the position from $0 \to k$, where $k$ is some quantity and $n_i$ is any number from $0 \to 9$ at position $i$.
@@ -69,9 +80,15 @@ To take an example from above, $5,467,234$ has $k=6$.
 So the above can be written as
 
 $$
+\begin{aligned}
 5,467,234 = \sum_{i=0}^{6}(n_i \times 10^i) = \\
 4 \times 10^0 + 3 \times 10^1 + 2 \times 10^2 + 7 \times 10^3 + 6 \times 10^4 + 4 \times 10^5 +  5 \times 10^6
+\end{aligned}
 $$
+
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
 
 ## Number systems
 
@@ -144,6 +161,10 @@ Some examples
 3. `0x1c8` $\equiv (456)_{10}$
 4. .. and so on.
 
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
 ## Conversion between number systems
 
 Although the converting from decimal number system to other number systems might seem unnatural at first, it makes sense once you understand the rationale behind it. Converting between 2 different number systems has the effect of saying what is group size in which we are counting the parts in.
@@ -163,12 +184,14 @@ Let us take an example of converting the number $(57)_{10}$ to binary.
 Here $number=57 \ , base = 2$
 
 $$
+\begin{aligned}
 57 \div 2 \implies quot=\mathit{28}, rem=\mathbf{1} \\
 28 \div 2 \implies quot=\mathit{14}, rem=\mathbf{0} \\
 14 \div 2 \implies quot=\mathit{7}, rem=\mathbf{0} \\
 7 \div 2 \implies quot=\mathit{3}, rem=\mathbf{1} \\
 3 \div 2 \implies quot=\mathit{1}, rem=\mathbf{1} \\
 1 \div 2 \implies quot=\mathit{0}, rem=\mathbf{1} \\
+\end{aligned}
 $$
 
 Arranging these remainders from top moving down as right to left in our new base 2 number, up we get `111001`. We can also write this as $(111001)_2$ or `b111001`.
@@ -178,10 +201,12 @@ To convert back from the base $k$ system back to decimal number system, we just 
 In our example above, to convert `b111001` back to decimal number system, we just multiply each digit with their place value, in this case powers of 2. We have 6 digits in this number, so we have 6 positions from $0 \to 5$
 
 $$
+\begin{aligned}
 \sum_{i=0}^{5} (2^i \times n_i) = \\
 \implies 2^0 \times 1 + 2^1 \times 0 + 2^2 \times 0 + 2^3 \times 1 + 2^4 \times 1 + 2^5 \times 1 \\
 \implies 1 \times 1 + 2 \times 0 + 4 \times 0 + 8 \times 1 + 16 \times 1 + 32 \times 1 \\
 \implies 1 + 0 + 0 + 8 + 16 + 32 = 57
+\end{aligned}
 $$
 
 We can do the same exercise with converting $(57)_{10}$ to hexadecimal
@@ -189,8 +214,10 @@ We can do the same exercise with converting $(57)_{10}$ to hexadecimal
 Here $number=57 \ , base = 16$
 
 $$
+\begin{aligned}
 57 \div 16 \implies quot=3, rem=9 \\
 3 \div 16 \implies quot=0, rem=3 \\
+\end{aligned}
 $$
 
 Arranging these remainders from bottom up we get `39`. We can also write this as $(39)_{16}$ or `x39`.
@@ -198,10 +225,12 @@ Arranging these remainders from bottom up we get `39`. We can also write this as
 To convert back from hexadecimal system back to decimal we again use our place value system logic. We have 2 digits in this number
 
 $$
+\begin{aligned}
 \sum_{i=0}^{1} (16^i \times n_i) = \\
 \implies 16^0 \times 9 + 16^1 \times 3 \\
 \implies 1 \times 9 + 16 \times 3 \\
 \implies 9 + 48 = 57
+\end{aligned}
 $$
 
 You can use the same logic to work with the octal number system too. As an exercise try to convert $(67)_10$ to octal number system and use the place value logic to get back the original answer in base-10.
@@ -223,6 +252,10 @@ In hex
 3. `0b0010` = `0x2`
 
 Which gives us the number `0x2a6` which is what we started with. The same works the other way around perfectly too.
+
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
 
 ### Quick reference chart
 
@@ -257,6 +290,10 @@ Some quick notes
 | `18`              | `0x12`                | `0b00010010`    | `0o22`         |
 | `19`              | `0x13`                | `0b00010011`    | `0o23`         |
 | `20`              | `0x14`                | `0b00010100`    | `0o24`         |
+
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
 
 ## Helpful resources
 

@@ -1,7 +1,11 @@
 # Week 1 Problems
 
-> ***Please show your working for all of these problems and not just the final solution.***
-> If the base of the number is not given, assume it to be base 10.
+## Note before
+
+> 1. ***Please show your working for all of these problems and not just the final solution.***
+> 2. If the base of the number is not given, assume it to be base 10.
+
+## Problems
 
 1. Convert the number $(452873863)_{10}$ to binary. Convert the obtained number back to base-10 to verify your results.
 2. Convert the number $(84851)_{10}$ to octal. Convert the obtained number back to base-10 to verify your results.
